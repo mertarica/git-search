@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useCallback, useRef, useEffect } from "react";
 import { TextField } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/store";
@@ -12,15 +12,18 @@ const SearchInput: React.FC = () => {
   );
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    if (debounceRef.current) {
-      clearTimeout(debounceRef.current);
-    }
-    debounceRef.current = setTimeout(() => {
-      dispatch(setSearchQuery(value));
-    }, 500);
-  };
+  const handleChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      const value = event.target.value;
+      if (debounceRef.current) {
+        clearTimeout(debounceRef.current);
+      }
+      debounceRef.current = setTimeout(() => {
+        dispatch(setSearchQuery(value));
+      }, 500);
+    },
+    [dispatch]
+  );
 
   useEffect(() => {
     return () => {

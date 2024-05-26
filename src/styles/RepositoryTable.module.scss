@@ -1,16 +1,20 @@
 .table-container {
   margin-top: 1rem;
+}
 
-  .MuiTable-root {
-    min-width: 650px;
-
-    @media (max-width: 600px) {
-      min-width: 100%;
+.table-cell-author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  @media (max-width: 600px) {
+    div {
+      display: none;
     }
   }
 }
 
-.loading-spinner{
+.loading-spinner {
   display: flex;
   justify-content: center;
   align-items: center;

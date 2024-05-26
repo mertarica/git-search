@@ -19,6 +19,7 @@ import {
   TablePagination,
   Paper,
   CircularProgress,
+  Avatar,
 } from "@mui/material";
 import styles from "../styles/RepositoryTable.module.scss";
 
@@ -65,8 +66,8 @@ const RepositoryTable: React.FC = () => {
   }
 
   return (
-    <Paper className={styles["table-container"]} elevation={3}>
-      <TableContainer>
+    <Paper elevation={3}>
+      <TableContainer className={styles["table-container"]}>
         <Table>
           <TableHead>
             <TableRow>
@@ -112,7 +113,13 @@ const RepositoryTable: React.FC = () => {
             {repositories.map((repo) => (
               <TableRow key={repo.id}>
                 <TableCell>{repo.id}</TableCell>
-                <TableCell>{repo.owner?.login}</TableCell>
+                <TableCell>
+                  <div className={styles["table-cell-author"]}>
+                    <Avatar src={repo.owner.avatar_url} />
+
+                    {repo.owner?.login}
+                  </div>
+                </TableCell>
                 <TableCell>{repo?.description}</TableCell>
                 <TableCell>{repo?.stargazers_count}</TableCell>
                 <TableCell>{repo?.forks_count}</TableCell>

@@ -119,14 +119,6 @@ Displays the status of the last request (loading, succeeded, failed).
 
 Displays the list of repositories with details such as ID, username, description, stars, forks, and last update date. Supports sorting and pagination.
 
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any changes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgements
 
 - [GitHub API](https://developer.github.com/v3/)

@@ -49,5 +49,6 @@ describe("StatusIndicator", () => {
     expect(screen.getByTestId("status-indicator")).toBeInTheDocument();
     expect(screen.queryByText("Loading...")).not.toBeInTheDocument();
     expect(screen.queryByText("Failed to fetch data")).not.toBeInTheDocument();
+    expect(screen.queryByText("Data fetched successfully")).not.toBeInTheDocument();
   });
 });
