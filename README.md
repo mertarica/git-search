@@ -11,6 +11,24 @@ This project is a GitHub Repositories Explorer application built with React, Typ
 - Remembers the state between sessions.
 - Fully responsive design.
 
+## Usage
+
+### Language Selector
+
+Allows the user to select a programming language. The selected language is used to filter the search results.
+
+### Search Input
+
+A text input field where the user can enter keywords to search for repositories. The search is performed automatically as the user types.
+
+### Status Indicator
+
+Displays the status of the last request (loading, succeeded, failed).
+
+### Repository Table
+
+Displays the list of repositories with details such as ID, username, description, stars, forks, and last update date. Supports sorting and pagination.
+
 ## Technologies Used
 
 - React
@@ -99,25 +117,6 @@ yarn run lint
 └── package.json
 
 ```
-
-
-## Usage
-
-### Language Selector
-
-Allows the user to select a programming language. The selected language is used to filter the search results.
-
-### Search Input
-
-A text input field where the user can enter keywords to search for repositories. The search is performed automatically as the user types.
-
-### Status Indicator
-
-Displays the status of the last request (loading, succeeded, failed).
-
-### Repository Table
-
-Displays the list of repositories with details such as ID, username, description, stars, forks, and last update date. Supports sorting and pagination.
 
 ## Acknowledgements
 
