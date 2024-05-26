@@ -1,0 +1,18 @@
+.table-container {
+  margin-top: 1rem;
+
+  .MuiTable-root {
+    min-width: 650px;
+
+    @media (max-width: 600px) {
+      min-width: 100%;
+    }
+  }
+}
+
+.loading-spinner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}

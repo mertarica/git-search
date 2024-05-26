@@ -1,0 +1,7 @@
+.search-input {
+  margin-bottom: 1rem;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}

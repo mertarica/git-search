@@ -1,0 +1,22 @@
+.statusIndicator {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.loading {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.succeeded {
+  color: #fff;
+  background-color: #28a745;
+}
+
+.failed {
+  color: #fff;
+  background-color: #dc3545;
+}

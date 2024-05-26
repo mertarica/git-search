@@ -1,25 +1,27 @@
-import { useState } from 'react'
-import './App.css'
+import React from "react";
+import { Container, Typography, Box } from "@mui/material";
+import LanguageSelector from "./components/LanguageSelector";
+import SearchInput from "./components/SearchInput";
+import RepositoryTable from "./components/RepositoryTable";
+import StatusIndicator from "./components/StatusIndicator";
+import styles from "./styles/App.module.scss";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: React.FC = () => {
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Container className={styles["container"]}>
+      <Box className="container">
+        <div className={styles.header}>
+          <Typography variant="h4" gutterBottom className="title">
+            GitHub Repository Search
+          </Typography>
+          <LanguageSelector />
+          <SearchInput />
+          <StatusIndicator />
+        </div>
+        <RepositoryTable />
+      </Box>
+    </Container>
+  );
+};
 
-export default App
+export default App;

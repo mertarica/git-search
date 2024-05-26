@@ -32,7 +32,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
     "no-console": "warn", // Warns against using console.log() and similar functions
-    "no-unused-vars": "off", // Warns about unused variables
+    "no-unused-vars": "error", // Warns about unused variables
     "@typescript-eslint/no-unused-vars": ["error"],
     "no-undef": "error", // Throws an error for undeclared variables
     "no-extra-semi": "warn", // Warns about unnecessary semicolons

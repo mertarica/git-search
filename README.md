@@ -1,30 +1,134 @@
-# React + TypeScript + Vite
+# GitHub Repositories Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a GitHub Repositories Explorer application built with React, TypeScript, Material-UI, and Redux Toolkit. The application allows users to search and filter GitHub repositories by language and keywords. It also supports sorting, pagination, and remembers the user's state even after the page is closed. The application is fully responsive and accessible on mobile devices.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Search GitHub repositories by keywords.
+- Filter repositories by programming languages (JavaScript, Scala, Python).
+- Sorting by stars, forks, and last update date.
+- Pagination support.
+- Remembers the state between sessions.
+- Fully responsive design.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Material-UI
+- Redux Toolkit
+- Axios
+- SCSS Modules
+- Jest and React Testing Library
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js (>=14.x)
+- npm (>=6.x) or yarn (>=1.x)
+
+### Installation
+
+Install the dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+### Running the Application
+
+To start the application in development mode, run:
+
+```bash
+npm run dev
+# or
+yarn run dev
+```
+The application will be available at http://localhost:3000.
+
+### Running tests
+
+To run the unit tests, use:
+
+```bash
+npm run test
+# or
+yarn run test
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Running linter
+
+To run the linter check, use:
+
+```bash
+npm run lint
+# or
+yarn run lint
+```
+
+### Folder Structure
+```bash
+.
+├── public
+│   └── index.html
+├── src
+│   ├── components
+│   │   ├── LanguageSelector.tsx
+│   │   ├── RepositoryTable.tsx
+│   │   ├── SearchInput.tsx
+│   │   ├── StatusIndicator.tsx
+│   │   └── __tests__
+│   │       ├── LanguageSelector.test.tsx
+│   │       ├── RepositoryTable.test.tsx
+│   │       ├── SearchInput.test.tsx
+│   │       └── StatusIndicator.test.tsx
+│   ├── redux
+│   │   ├── slices
+│   │   │   └── repositorySlice.ts
+│   │   ├── store.ts
+│   │   └── __tests__
+│   │       └── repositorySlice.test.ts
+│   ├── App.tsx
+│   ├── App.module.scss
+│   ├── index.tsx
+│   └── index.scss
+└── package.json
+
+```
+
+
+## Usage
+
+### Language Selector
+
+Allows the user to select a programming language. The selected language is used to filter the search results.
+
+### Search Input
+
+A text input field where the user can enter keywords to search for repositories. The search is performed automatically as the user types.
+
+### Status Indicator
+
+Displays the status of the last request (loading, succeeded, failed).
+
+### Repository Table
+
+Displays the list of repositories with details such as ID, username, description, stars, forks, and last update date. Supports sorting and pagination.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any changes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- [GitHub API](https://developer.github.com/v3/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Material-UI](https://material-ui.com/)
