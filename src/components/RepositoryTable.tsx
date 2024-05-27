@@ -141,7 +141,7 @@ const RepositoryTable: React.FC = () => {
         count={totalCount}
         rowsPerPage={perPage}
         page={page}
-        onPageChange={(_e, p) => handlePageChange(p)}
+        onPageChange={(_, p) => handlePageChange(p)}
         onRowsPerPageChange={handleRowsPerPageChange}
       />
     </Paper>

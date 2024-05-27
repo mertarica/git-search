@@ -3,17 +3,17 @@ import { RootState } from "../store";
 import axios from "axios";
 
 interface Repository {
-  id: number;
-  owner: Owner;
-  description: string;
-  stargazers_count: number;
-  forks_count: number;
-  updated_at: string;
+  readonly id: number;
+  readonly owner: Owner;
+  readonly description: string;
+  readonly stargazers_count: number;
+  readonly forks_count: number;
+  readonly updated_at: string;
 }
 
 interface Owner {
-  login: string;
-  avatar_url: string;
+  readonly login: string;
+  readonly avatar_url: string;
 }
 
 export interface RepositoryState {
